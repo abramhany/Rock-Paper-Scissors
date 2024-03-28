@@ -1,0 +1,44 @@
+h1 {
+    text-align: center;
+    color: rgb(165, 123, 9);
+
+}
+h2 {
+    color: rgb(224, 190, 125);
+    font-size: 40px;
+}
+h3 {
+    color: rgb(94, 160, 185);
+    size: 32px;
+}
+body {
+    background:url(image.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+div{
+ width:50%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 50px;
+}
+button {
+    width: 100px;
+    height: 50px;
+    background-color: #2b80e2;
+    color: white;
+    border-radius: 15px;
+    border: none;
+    font-weight: bold;
+}
+button:hover {
+    background-color: #2b67ac}
+    button:active {
+        background-color: #2b80e2;
+        box-shadow: 0 5px #90dcf3;
+        transform: translateY(4px);
+      }
