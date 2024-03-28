@@ -1,6 +1,3 @@
-<<<<<<< Updated upstream
-const choice = ['rock','paper','sicssors']
-=======
 const choice = ['rock','paper','scissors']
 let score = 0
 let playerSelection = ""
@@ -56,7 +53,6 @@ let playerSelection = ""
     })
 
 // get a random selection from the computer
->>>>>>> Stashed changes
 function getComputerChoice(){
     
     const random = choice[(Math.floor(Math.random()*choice.length))]
@@ -65,16 +61,11 @@ function getComputerChoice(){
 }
 getComputerChoice()
 
-<<<<<<< Updated upstream
-function playRound(playerSelection, computerSelection) {
-    if(choice.includes(playerSelection)){
-=======
 
  
 function playRound(playerSelection, computerSelection) {
     getComputerChoice()
     
->>>>>>> Stashed changes
 
         console.log(`You selected: `+playerSelection + ` computer selected: `+computerSelection)
 
@@ -82,18 +73,6 @@ function playRound(playerSelection, computerSelection) {
             result.textContent = "Draw!"
         }if(playerSelection=='rock'){
             if(computerSelection=='paper'){
-<<<<<<< Updated upstream
-                console.log("You Lose")
-            }if(computerSelection=='sicssors'){
-                console.log("You Win")
-            }
-        }
-        if(playerSelection=='paper'){
-            if(computerSelection=='sicssors'){
-                console.log("You Lose")
-            }if(computerSelection=='rock'){
-                console.log("You Win")
-=======
                 result.textContent = "You Lose!"
                 score--
             }if(computerSelection=='scissors'){
@@ -108,22 +87,15 @@ function playRound(playerSelection, computerSelection) {
             }if(computerSelection=='rock'){
                 result.textContent = "You Win!"
                 score++
->>>>>>> Stashed changes
             }
         }
         if(playerSelection=='scissors'){
             if(computerSelection=='rock'){
-<<<<<<< Updated upstream
-                console.log("You Lose")
-            }if(computerSelection=='paper'){
-                console.log("You Win")
-=======
                 result.textContent = "You Lose!"
                 score--
             }if(computerSelection=='paper'){
                 result.textContent = "You Win!"
                 score++
->>>>>>> Stashed changes
             }
         }
         if(score < 0 ){
@@ -131,18 +103,9 @@ function playRound(playerSelection, computerSelection) {
         }
         scoreDisplay.textContent = "your score is: "+score
     }
-<<<<<<< Updated upstream
-  }
-  const input = prompt()
-  const playerSelection = input.toLowerCase();
-  const computerSelection = getComputerChoice();
-  console.log(playRound(playerSelection, computerSelection));
-  
-=======
    
 
   
 
 
  
->>>>>>> Stashed changes
