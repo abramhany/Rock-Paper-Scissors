@@ -1,13 +1,19 @@
 const choice = ['rock','paper','sicssors']
+let score = 0
+
+while(score != 5){
 function getComputerChoice(){
     
     const random = choice[(Math.floor(Math.random()*choice.length))]
     const computerSelection = random
     return computerSelection
 }
-getComputerChoice()
 
+ 
 function playRound(playerSelection, computerSelection) {
+    
+    getComputerChoice()
+    
     if(choice.includes(playerSelection)){
 
         console.log(`you selected: `+playerSelection + ` computer selected: `+computerSelection)
@@ -16,31 +22,46 @@ function playRound(playerSelection, computerSelection) {
             alert("Draw")
         }if(playerSelection=='rock'){
             if(computerSelection=='paper'){
-                console.log("You Lose")
+                alert("You Lose")
+                score--
             }if(computerSelection=='sicssors'){
-                console.log("You Win")
+                alert("You Win")
+                score++
             }
         }
         if(playerSelection=='paper'){
             if(computerSelection=='sicssors'){
-                console.log("You Lose")
+                alert("You Lose")
+                score--
             }if(computerSelection=='rock'){
-                console.log("You Win")
+                alert("You Win")
+                score++
             }
         }
         if(playerSelection=='sicssors'){
             if(computerSelection=='rock'){
-                console.log("You Lose")
+                alert("You Lose")
+                score--
             }if(computerSelection=='paper'){
-                console.log("You Win")
+                alert("You Win")
+                score++
             }
         }
     }else{
         alert("Wrong input!")
     }
+    if(score < 0 ){
+        score = 0
+    }
+    alert("your score is: "+ score)
+    
   }
+
   const input = prompt()
   const playerSelection = input.toLowerCase();
   const computerSelection = getComputerChoice();
-  console.log(playRound(playerSelection, computerSelection));
+  
+    console.log(playRound(playerSelection, computerSelection));
+  
+}
   
